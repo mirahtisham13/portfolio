@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download } from 'lucide-react';
+import TiltCard from './TiltCard';
 import './Resume.css';
 
 const Resume = () => {
@@ -21,25 +22,25 @@ const Resume = () => {
             <h3 className="heading-md">Education & Experience</h3>
             
             <div className="timeline">
-              <div className="timeline-item glass-card">
+              <TiltCard className="timeline-item glass-card">
                 <div className="timeline-dot"></div>
                 <h4>Bachelor of Arts in Economics</h4>
                 <p className="text-accent">Government Degree College Kupwara | Expected Aug 2026</p>
                 <p className="text-muted">
                   Focusing on core economic principles and data analysis while combining analytical coursework with creative problem-solving and rapid technical skill acquisition.
                 </p>
-              </div>
+              </TiltCard>
 
-              <div className="timeline-item glass-card">
+              <TiltCard className="timeline-item glass-card">
                 <div className="timeline-dot"></div>
                 <h4>Digital Support Assistant (Volunteer)</h4>
                 <p className="text-accent">Community Support | Kupwara, J&K</p>
                 <p className="text-muted">
                   Assisted community members with creating, formatting, and managing spreadsheets and digital documents, providing hands-on digital literacy support.
                 </p>
-              </div>
+              </TiltCard>
 
-              <div className="timeline-item glass-card">
+              <TiltCard className="timeline-item glass-card">
                 <div className="timeline-dot"></div>
                 <h4>Certifications & Learning</h4>
                 <p className="text-accent">DataCamp & Educative</p>
@@ -47,7 +48,7 @@ const Resume = () => {
                   • Data Analysis (In Progress) - DataCamp<br/>
                   • Learn Python 3 - Educative
                 </p>
-              </div>
+              </TiltCard>
             </div>
           </div>
 
@@ -55,7 +56,7 @@ const Resume = () => {
           <div className="resume-column animate-fade-in delay-200">
             <h3 className="heading-md">Technical Skills</h3>
             
-            <div className="skills-container glass-card">
+            <TiltCard className="skills-container glass-card">
               <div className="skill-category">
                 <h4>AI Tools & Development</h4>
                 <p className="text-muted">ChatGPT, Gemini, Claude, Antigravity</p>
@@ -85,7 +86,7 @@ const Resume = () => {
                 <h4>Languages</h4>
                 <p className="text-muted">English (Fluent), Urdu (Fluent), Kashmiri (Fluent), Hindi (Conversational)</p>
               </div>
-            </div>
+            </TiltCard>
           </div>
         </div>
       </div>

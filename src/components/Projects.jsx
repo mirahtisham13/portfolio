@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Code } from 'lucide-react';
+import TiltCard from './TiltCard';
 import './Projects.css';
 
 const projects = [
@@ -54,7 +55,7 @@ const Projects = () => {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div 
+            <TiltCard 
               key={project.id} 
               className={`project-card glass-card animate-fade-in delay-${(index % 3 + 1) * 100}`}
             >
@@ -82,7 +83,7 @@ const Projects = () => {
                   </a>
                 )}
               </div>
-            </div>
+            </TiltCard>
           ))}
         </div>
       </div>

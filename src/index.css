@@ -36,11 +36,6 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  /* subtle gradient background */
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(129, 140, 248, 0.05), transparent 25%);
-  background-attachment: fixed;
 }
 
 a {

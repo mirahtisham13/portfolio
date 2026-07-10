@@ -1,8 +1,15 @@
 import React from 'react';
 import { ArrowRight, Code, User, FileText } from 'lucide-react';
+import useTypewriter from '../hooks/useTypewriter';
 import './Hero.css';
 
 const Hero = () => {
+  const typingText = useTypewriter([
+    'AI Orchestrator',
+    'Freelance Web Developer',
+    'Problem Solver'
+  ]);
+
   return (
     <section id="home" className="hero-section">
       <div className="container hero-container">
@@ -11,9 +18,10 @@ const Hero = () => {
             🟢 Available for Freelance Projects
           </div>
           <h2 className="hero-subtitle text-gradient">Hello, I'm Ahtisham Majeed Mir</h2>
-          <h1 className="heading-xl hero-title">
-            Crafting Digital <br />
-            <span className="text-gradient">Experiences.</span>
+          <h1 className="heading-xl hero-title" style={{ minHeight: '1.2em' }}>
+              <span className="text-gradient" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                {typingText}<span className="cursor">|</span>
+              </span>
           </h1>
           <p className="hero-description text-muted">
             A passionate Creator and AI Orchestrator specializing in rapidly building exceptional digital experiences, 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Code } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -18,7 +18,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled glass' : ''}`}>
       <div className="container navbar-container">
         <a href="#home" className="navbar-logo">
-          <img src="/avatar.jpg" alt="Ahtisham" className="navbar-avatar" />
+          <Code size={28} className="navbar-icon" style={{ color: 'var(--accent-primary)' }} />
           <span className="text-gradient">Ahtisham</span>
         </a>
 

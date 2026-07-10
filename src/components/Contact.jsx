@@ -52,7 +52,7 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." className="form-control" required></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." className="form-control" required></textarea>
             </div>
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>Send Message</button>
           </form>

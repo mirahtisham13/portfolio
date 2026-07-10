@@ -1,7 +1,7 @@
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 3rem;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
 }
 
 .contact-info {
@@ -23,7 +23,7 @@
 }
 
 .contact-form {
-  padding: 2.5rem;
+  padding: 2rem;
 }
 
 .form-group {

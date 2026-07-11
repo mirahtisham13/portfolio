@@ -15,7 +15,7 @@ const Navbar = ({ theme, toggleTheme }) => {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar-scrolled glass' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
         <a href="#home" className="navbar-logo">
           <Code size={28} className="navbar-icon" style={{ color: 'var(--accent-primary)' }} />

@@ -75,7 +75,7 @@ const Hero = () => {
           <div className="visual-blob"></div>
           <div className="hero-avatar-wrap">
             <img
-              src="/Avatar.jpg"
+              src="/avatar.png"
               alt="Ahtisham Majeed Mir"
               className="hero-avatar"
             />

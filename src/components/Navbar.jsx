@@ -44,7 +44,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`} role="navigation" aria-label="Main navigation">
       <div className="container navbar-container">
         <a href="#home" className="navbar-logo" aria-label="Go to top">
-          <img src="/Avatar.jpg" alt="Ahtisham" className="navbar-avatar" />
+          <img src="/avatar.png" alt="Ahtisham" className="navbar-avatar" />
           <span className="text-gradient">Ahtisham</span>
         </a>
 

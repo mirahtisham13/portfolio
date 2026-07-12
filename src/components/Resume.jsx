@@ -3,15 +3,42 @@ import { Download } from 'lucide-react';
 import TiltCard from './TiltCard';
 import './Resume.css';
 
+const skillCategories = [
+  {
+    label: 'AI Tools & Development',
+    skills: ['ChatGPT', 'Gemini', 'Claude', 'Antigravity'],
+  },
+  {
+    label: 'Data & Programming',
+    skills: ['Python', 'Data Analysis', 'Google Sheets'],
+  },
+  {
+    label: 'Web & Deployment',
+    skills: ['HTML/CSS/JS', 'React', 'Next.js', 'Supabase', 'Vercel'],
+  },
+  {
+    label: 'Design & Multimedia',
+    skills: ['Canva', 'CapCut', 'Mobile Photography'],
+  },
+  {
+    label: 'Productivity',
+    skills: ['Microsoft Excel/Word', 'Google Docs', 'Zoom', 'Teams'],
+  },
+  {
+    label: 'Languages',
+    skills: ['English', 'Urdu', 'Kashmiri', 'Hindi'],
+  },
+];
+
 const Resume = () => {
   return (
     <section id="resume" className="section resume-section">
       <div className="container">
-        <div className="section-header animate-fade-in" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-          <h2 className="heading-lg" style={{ marginBottom: 0 }}>
-            Resume & <span className="text-gradient">Experience</span>
+        <div className="section-header resume-header animate-fade-in">
+          <h2 className="heading-lg">
+            Resume &amp; <span className="text-gradient">Experience</span>
           </h2>
-          <a href="/Resume.pdf" download="Ahtisham_Resume.pdf" className="btn btn-primary">
+          <a href="/Resume.pdf" download="Ahtisham_Resume.pdf" className="btn btn-primary" aria-label="Download PDF Resume">
             Download PDF <Download size={20} />
           </a>
         </div>
@@ -19,8 +46,8 @@ const Resume = () => {
         <div className="resume-grid">
           {/* Education & Experience Column */}
           <div className="resume-column animate-fade-in delay-100">
-            <h3 className="heading-md">Education & Experience</h3>
-            
+            <h3 className="heading-md">Education &amp; Experience</h3>
+
             <div className="timeline">
               <TiltCard className="timeline-item glass-card">
                 <div className="timeline-dot"></div>
@@ -33,20 +60,20 @@ const Resume = () => {
 
               <TiltCard className="timeline-item glass-card">
                 <div className="timeline-dot"></div>
-                <h4>Digital Support Assistant (Volunteer)</h4>
-                <p className="text-accent">Community Support | Kupwara, J&K</p>
+                <h4>Freelance Web Developer</h4>
+                <p className="text-accent">Self-Employed | 2024 – Present</p>
                 <p className="text-muted">
-                  Assisted community members with creating, formatting, and managing spreadsheets and digital documents, providing hands-on digital literacy support.
+                  Built and deployed professional clinic websites with admin dashboards for real clients (Dr. Kaiser Clinic, Dr. Suhail Tantry Clinic), handling full-cycle development and domain management.
                 </p>
               </TiltCard>
 
               <TiltCard className="timeline-item glass-card">
                 <div className="timeline-dot"></div>
-                <h4>Certifications & Learning</h4>
-                <p className="text-accent">DataCamp & Educative</p>
+                <h4>Certifications &amp; Learning</h4>
+                <p className="text-accent">DataCamp &amp; Educative</p>
                 <p className="text-muted">
-                  • Data Analysis (In Progress) - DataCamp<br/>
-                  • Learn Python 3 - Educative
+                  • Data Analysis (In Progress) – DataCamp<br/>
+                  • Learn Python 3 – Educative
                 </p>
               </TiltCard>
             </div>
@@ -55,37 +82,18 @@ const Resume = () => {
           {/* Technical Skills Column */}
           <div className="resume-column animate-fade-in delay-200">
             <h3 className="heading-md">Technical Skills</h3>
-            
+
             <TiltCard className="skills-container glass-card">
-              <div className="skill-category">
-                <h4>AI Tools & Development</h4>
-                <p className="text-muted">ChatGPT, Gemini, Claude, Antigravity</p>
-              </div>
-              
-              <div className="skill-category">
-                <h4>Data & Programming</h4>
-                <p className="text-muted">Python, Data Analysis Fundamentals</p>
-              </div>
-
-              <div className="skill-category">
-                <h4>Web Deployment</h4>
-                <p className="text-muted">Vercel, Domain Management</p>
-              </div>
-
-              <div className="skill-category">
-                <h4>Productivity & Collaboration</h4>
-                <p className="text-muted">Microsoft Excel/Word, Google Sheets/Docs, Zoom, Teams</p>
-              </div>
-
-              <div className="skill-category">
-                <h4>Design & Multimedia</h4>
-                <p className="text-muted">Mobile Photography, Canva, CapCut</p>
-              </div>
-
-              <div className="skill-category">
-                <h4>Languages</h4>
-                <p className="text-muted">English (Fluent), Urdu (Fluent), Kashmiri (Fluent), Hindi (Conversational)</p>
-              </div>
+              {skillCategories.map((cat) => (
+                <div className="skill-category" key={cat.label}>
+                  <h4>{cat.label}</h4>
+                  <div className="skill-pills">
+                    {cat.skills.map((skill) => (
+                      <span key={skill} className="skill-pill">{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </TiltCard>
           </div>
         </div>

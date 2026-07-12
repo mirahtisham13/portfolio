@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,6 +7,8 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import BackgroundOrbs from './components/BackgroundOrbs';
+import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
 
 const App = () => {
   const [theme, setTheme] = useState('dark');
@@ -48,12 +51,10 @@ const App = () => {
         <Projects />
         <Contact />
       </main>
-      
-      <footer style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-secondary)', fontSize: '0.9rem', borderTop: '1px solid var(--card-border)' }}>
-        <p>Built with AI & ⚡ by Ahtisham Majeed Mir. &copy; {new Date().getFullYear()}</p>
-      </footer>
+      <Footer />
+      <ScrollToTop />
     </div>
   );
-}
+};
 
 export default App;

@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="container hero-container">
-        <div className="hero-content animate-fade-in">
+        <div className="hero-content hero-animate">
           <div className="hero-badge">
             🟢 Available for Freelance Projects
           </div>
@@ -60,7 +60,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hero-visual animate-fade-in delay-200">
+        <div className="hero-visual hero-animate delay-200">
           <div className="visual-blob"></div>
           <div className="hero-avatar-wrap">
             <img

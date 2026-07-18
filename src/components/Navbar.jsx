@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import './Navbar.css';
 
-const NAV_SECTIONS = ['about', 'resume', 'projects', 'contact'];
+const NAV_SECTIONS = ['home', 'about', 'resume', 'projects', 'contact'];
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);

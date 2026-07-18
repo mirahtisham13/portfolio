@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Loader } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
   const [formState, setFormState] = useState({ submitting: false, success: false, error: false });
+
+  // Auto-dismiss feedback banners after 5 seconds
+  useEffect(() => {
+    if (!formState.success && !formState.error) return;
+    const timer = setTimeout(() => {
+      setFormState((prev) => ({ ...prev, success: false, error: false }));
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [formState.success, formState.error]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,18 +57,10 @@ const Contact = () => {
             </a>
 
             <div className="info-item glass-card">
-              <Phone className="info-icon" size={24} aria-hidden="true" />
-              <div>
-                <h4 className="info-title">Phone</h4>
-                <p className="text-muted">+91 7780875867</p>
-              </div>
-            </div>
-
-            <div className="info-item glass-card">
               <MapPin className="info-icon" size={24} aria-hidden="true" />
               <div>
                 <h4 className="info-title">Location</h4>
-                <p className="text-muted">Kupwara, J&K (Remote)</p>
+                <p className="text-muted">Kupwara, J&amp;K (Remote)</p>
               </div>
             </div>
           </div>

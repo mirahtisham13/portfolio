@@ -51,7 +51,7 @@ const Contact = () => {
             <a href="mailto:mirahtisham13@gmail.com" className="info-item glass-card info-item-link">
               <Mail className="info-icon" size={24} aria-hidden="true" />
               <div>
-                <h4 className="info-title">Email</h4>
+                <h3 className="info-title">Email</h3>
                 <p className="text-muted">mirahtisham13@gmail.com</p>
               </div>
             </a>
@@ -59,7 +59,7 @@ const Contact = () => {
             <div className="info-item glass-card">
               <MapPin className="info-icon" size={24} aria-hidden="true" />
               <div>
-                <h4 className="info-title">Location</h4>
+                <h3 className="info-title">Location</h3>
                 <p className="text-muted">Kupwara, J&amp;K (Remote)</p>
               </div>
             </div>

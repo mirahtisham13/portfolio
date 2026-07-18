@@ -11,7 +11,9 @@ import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 
 const App = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('portfolio-theme') || 'dark';
+  });
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -37,7 +39,11 @@ const App = () => {
   }, []);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme((prev) => {
+      const next = prev === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('portfolio-theme', next);
+      return next;
+    });
   };
 
   return (

@@ -68,7 +68,7 @@ const Contact = () => {
             className="contact-form glass-card animate-fade-in delay-200"
             onSubmit={handleSubmit}
           >
-            <input type="hidden" name="access_key" value="d668ad3a-687d-44a7-997e-de1ddfea496d" />
+            <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_KEY} />
 
             {formState.success && (
               <div className="form-feedback form-feedback--success" role="alert">

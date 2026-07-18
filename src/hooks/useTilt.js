@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-const useTilt = (options = { max: 15, perspective: 1000, scale: 1.02 }) => {
+const useTilt = ({ max = 15, perspective = 1000, scale = 1.02 } = {}) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -11,18 +11,18 @@ const useTilt = (options = { max: 15, perspective: 1000, scale: 1.02 }) => {
       const rect = element.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      
+
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      
-      const rotateX = ((y - centerY) / centerY) * -options.max;
-      const rotateY = ((x - centerX) / centerX) * options.max;
 
-      element.style.transform = `perspective(${options.perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${options.scale})`;
+      const rotateX = ((y - centerY) / centerY) * -max;
+      const rotateY = ((x - centerX) / centerX) * max;
+
+      element.style.transform = `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
     };
 
     const handleMouseLeave = () => {
-      element.style.transform = `perspective(${options.perspective}px) rotateX(0deg) rotateY(0deg) scale(1)`;
+      element.style.transform = `perspective(${perspective}px) rotateX(0deg) rotateY(0deg) scale(1)`;
       element.style.transition = 'transform 0.5s ease';
     };
 
@@ -39,7 +39,7 @@ const useTilt = (options = { max: 15, perspective: 1000, scale: 1.02 }) => {
       element.removeEventListener('mouseleave', handleMouseLeave);
       element.removeEventListener('mouseenter', handleMouseEnter);
     };
-  }, [options]);
+  }, [max, perspective, scale]); // primitives — safe dependency array
 
   return ref;
 };

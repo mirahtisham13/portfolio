@@ -38,9 +38,6 @@ const About = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text animate-fade-in">
-            <div className="about-photo-wrap">
-              <img src="/avatar.png" alt="Ahtisham Majeed Mir" className="about-avatar" />
-            </div>
 
             <h2 className="heading-lg">
               About <span className="text-gradient">Me</span>

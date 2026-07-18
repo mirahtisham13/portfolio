@@ -13,19 +13,6 @@
   max-width: 520px;
 }
 
-/* Avatar */
-.about-photo-wrap {
-  margin-bottom: 2rem;
-}
-
-.about-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent-primary);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
-}
 
 /* Stats row */
 .about-stats {
@@ -89,11 +76,6 @@
   .about-text {
     max-width: 100%;
     text-align: center;
-  }
-
-  .about-photo-wrap {
-    display: flex;
-    justify-content: center;
   }
 
   .about-stats {

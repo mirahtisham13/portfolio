@@ -13,8 +13,14 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.15; /* Subdued opacity so it doesn't overwhelm the design */
+  opacity: 0.15; /* dark mode — subdued so it doesn't overwhelm */
   animation: float 25s infinite ease-in-out alternate;
+  transition: opacity 0.4s ease;
+}
+
+/* Light mode orbs need higher opacity to be visible against light background */
+[data-theme="light"] .orb {
+  opacity: 0.28;
 }
 
 .orb-1 {

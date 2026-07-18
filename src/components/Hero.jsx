@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="visual-blob"></div>
           <div className="hero-avatar-wrap">
             <img
-              src="/avatar.png"
+              src="/avatar.webp"
               alt="Ahtisham Majeed Mir"
               className="hero-avatar"
               loading="eager"

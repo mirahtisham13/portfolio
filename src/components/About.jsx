@@ -38,7 +38,6 @@ const About = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text animate-fade-in">
-
             <h2 className="heading-lg">
               About <span className="text-gradient">Me</span>
             </h2>

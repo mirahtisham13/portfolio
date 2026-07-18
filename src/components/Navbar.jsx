@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import './Navbar.css';
 
-const NAV_SECTIONS = ['home', 'about', 'resume', 'projects', 'contact'];
+// Observed for active-state tracking (includes home for reset on scroll-to-top)
+const OBSERVED_SECTIONS = ['home', 'about', 'resume', 'projects', 'contact'];
+// Only these appear as visible nav links
+const NAV_LINKS = ['about', 'resume', 'projects', 'contact'];
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +33,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       { threshold: 0.4 }
     );
 
-    NAV_SECTIONS.forEach((id) => {
+    OBSERVED_SECTIONS.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -49,7 +52,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         </a>
 
         <ul className={`navbar-links ${mobileMenuOpen ? 'active glass' : ''}`} role="list">
-          {NAV_SECTIONS.map((id) => (
+          {NAV_LINKS.map((id) => (
             <li key={id}>
               <a
                 href={`#${id}`}
